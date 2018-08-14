@@ -38,12 +38,9 @@
         }
       },
       mounted() {
-          this.fetchBlog();
       },
       methods: {
-          fetchBlog() {
-            this.$store.dispatch('setBlogList', this.$store.state.articles)
-          }
+
       }
     }
 </script>

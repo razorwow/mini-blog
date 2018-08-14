@@ -8,6 +8,7 @@ Vue.use(Vuex);
 
 const state = {
   articles: [],
+  comments: []
 };
 
 export default new Vuex.Store({

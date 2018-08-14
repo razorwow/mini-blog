@@ -1,2 +1,2 @@
-export const SET_BLOG_LIST = 'SET_BLOG_LIST';
 export const ARTICLE_ADD = 'ARTICLE_ADD';
+export const COMMENT_ADD = 'COMMENT_ADD';
