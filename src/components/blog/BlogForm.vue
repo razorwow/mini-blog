@@ -1,5 +1,5 @@
 <template>
-  <b-col class="mb-3">
+  <b-col class="mb-3 text-center">
     <b-btn v-b-modal.modal1>Добавить новую статью</b-btn>
 
     <!-- Modal Component -->
