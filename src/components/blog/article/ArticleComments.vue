@@ -1,6 +1,6 @@
 <template>
   <div class="article_templ">
-    <div class="article_comments no_articles" v-if="!comments.length">
+    <div class="article_comments no_articles text-center" v-if="!comments.length">
       <h2>Комментариев пока нет.</h2>
     </div>
     <div class="article_comments" v-else>

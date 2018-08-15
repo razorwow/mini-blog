@@ -34,12 +34,5 @@ export const mutations = {
     state.comments.splice(commentKey, 1);
   }
 
- /* [types.SIGN_OUT] (state){
-    state.user = {};
-    state.tasks = {};
-  },
 
-  [types.SET_TASKS] (state, tasks_payload) {
-    state.tasks = tasks_payload;
-  },*/
 }

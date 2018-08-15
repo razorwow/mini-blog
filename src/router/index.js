@@ -18,25 +18,5 @@ export default new Router({
       name: 'article',
       component: ArticleMain
     }
-    /*{
-      path: '/',
-      name: 'List of Tasks',
-      component: TaskList,
-    },
-    {
-      path: '/signin',
-      name: 'SignIn to App',
-      component: Signin,
-    },
-    {
-      path: '/signup',
-      name: 'SignUp to App',
-      component: SignUp,
-    },
-    {
-      path: '/task/:id',
-      name: 'Task comp',
-      component: TaskMain,
-    }*/
   ],
 });

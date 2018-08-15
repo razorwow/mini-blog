@@ -18,7 +18,7 @@
     </div>
   </b-card>
   </div>
-  <div v-else>
+  <div class="text-center" v-else>
     <h2>Записей пока нет.</h2>
   </div>
   <b-pagination v-if="paginatedData.length" align="center" v-model="currentPage" :per-page="size" :limit="pageCount" :total-rows="articles.length"></b-pagination>

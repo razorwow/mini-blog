@@ -2,7 +2,7 @@
   <div id="app">
     <b-container fluid>
       <b-row>
-        <b-jumbotron class="text-center w-100" header="Welcome to Mini-blog" >
+        <b-jumbotron class="text-center w-100" header="Welcome to Blog" >
         </b-jumbotron>
       </b-row>
       <b-row>
