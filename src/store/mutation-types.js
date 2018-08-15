@@ -1,2 +1,6 @@
 export const ARTICLE_ADD = 'ARTICLE_ADD';
+export const ARTICLE_EDIT = 'ARTICLE_EDIT';
+export const ARTICLE_DELETE = 'ARTICLE_DELETE';
 export const COMMENT_ADD = 'COMMENT_ADD';
+export const COMMENT_EDIT = 'COMMENT_EDIT';
+export const COMMENT_DELETE = 'COMMENT_DELETE';

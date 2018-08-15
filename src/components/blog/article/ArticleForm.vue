@@ -1,6 +1,6 @@
 <template>
   <div class="well">
-    <b-form @submit="onSubmit"  >
+    <b-form @submit="onSubmit"   >
       <b-form-group id="nameInput"
                     label="Представьтесь:"
       >
@@ -42,12 +42,18 @@
         onSubmit(evt) {
           evt.preventDefault();
           const comment = {
+            id: Date.now(),
             article_id: this.$route.params.id,
             text: this.comment.text,
             name: this.comment.name,
             time: Date.now()
           };
           this.$store.dispatch('addComment', comment);
+          this.reset();
+        },
+        reset () {
+          this.comment.text = '';
+          this.comment.name = '';
         }
       }
     }
