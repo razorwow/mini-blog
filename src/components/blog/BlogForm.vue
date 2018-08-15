@@ -28,13 +28,8 @@
         <b-form-group id ="exampleInputGroup3"
         label="Полное описание"
         label-for="exampleTextarea3">
-          <b-form-textarea id="exampleTextarea3"
-                           v-model="form.descAll"
-                           placeholder="Укажите полное описание"
-                           :rows="3"
-                           required
-                           :max-rows="6">
-          </b-form-textarea>
+          <vue-editor v-model="form.descAll"></vue-editor>
+
         </b-form-group>
         <b-button type="submit" variant="primary">Добавить</b-button>
         <b-button type="reset" variant="danger">Сбросить</b-button>
@@ -45,7 +40,12 @@
 </template>
 
 <script>
+  import { VueEditor } from 'vue2-editor'
+
   export default {
+    components: {
+      VueEditor
+    },
     data () {
       return {
         form: {
@@ -60,10 +60,14 @@
     methods: {
       onSubmit (evt) {
         evt.preventDefault();
+        if (!this.checkTabs()) {
+          alert('Заполните все поля');
+          return;
+        }
         const article = {
-          title: this.form.title,
-          descShort: this.form.descShort,
-          descAll: this.form.descAll,
+          title: this.form.title.trim(),
+          descShort: this.form.descShort.trim(),
+          descAll: this.form.descAll.trim(),
           id: Date.now()
         };
         this.$store.dispatch('addArticle', article);
@@ -72,6 +76,9 @@
         this.$nextTick(() => { this.show = true });
         this.onReset(evt);
 
+      },
+      checkTabs() {
+        return !(this.form.title.trim() == '' || this.form.descShort.trim() == '' || this.form.descAll.trim() == '');
       },
       onReset (evt) {
         evt.preventDefault();

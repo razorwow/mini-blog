@@ -1,13 +1,18 @@
 <template>
 <b-col >
- <b-card class="mb-2" :title="article.title">
-   <p class="card-text">
-     {{article.descAll}}
+  <div v-if="!article" class="article_wrap">
+    <p class="h1">Нет такой статьи.</p>
+    <b-link to="/">На главную.</b-link>
+  </div>
+  <div v-else class="article_item">
+
+ <b-card class="mb-2 article_item_more" :title="article.title">
+   <p v-html="article.descAll" class="card-text">
    </p>
  </b-card>
 <article-form></article-form>
 <article-comments></article-comments>
-
+  </div>
 
 </b-col>
 </template>

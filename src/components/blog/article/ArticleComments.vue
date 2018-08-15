@@ -60,7 +60,6 @@
       mounted() {
         this.getComments(this.$route.params.id);
         this.subscribe();
-
       },
       methods: {
         commentDate (time)  {
@@ -104,7 +103,6 @@
   }
 
   .article_comment:hover .article_comment_buttons {
-    animation-name: fadeIn;
     opacity: 1;
   }
 </style>

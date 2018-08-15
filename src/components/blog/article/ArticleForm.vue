@@ -41,11 +41,15 @@
       methods: {
         onSubmit(evt) {
           evt.preventDefault();
+          if (!this.checkTabs()) {
+            alert('Заполните все поля');
+            return;
+          }
           const comment = {
             id: Date.now(),
             article_id: this.$route.params.id,
-            text: this.comment.text,
-            name: this.comment.name,
+            text: this.comment.text.trim(),
+            name: this.comment.name.trim(),
             time: Date.now()
           };
           this.$store.dispatch('addComment', comment);
@@ -54,6 +58,9 @@
         reset () {
           this.comment.text = '';
           this.comment.name = '';
+        },
+        checkTabs() {
+          return !(this.comment.name.trim() == '' || this.comment.text.trim() == '');
         }
       }
     }
